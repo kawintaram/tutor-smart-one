@@ -7,9 +7,18 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        lineSeed: ["LineSeed", "sans-serif"],
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: "#88b735",
+        secondary: "#707072",
+        dark: "#030712",
+        light: "#f8fafc",
+      },
+      height: {
+        112: "28rem",
+        128: "32rem",
       },
     },
   },
