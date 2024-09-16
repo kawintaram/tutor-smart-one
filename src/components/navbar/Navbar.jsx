@@ -42,12 +42,16 @@ const Navbar = () => {
 
       {/* Overlay menu for small screens */}
       <div
-        className={`fixed inset-0 bg-black bg-opacity-50 z-20 text-right text-xl ${
-          isOpen ? "block" : "hidden"
+        className={`fixed inset-0 bg-black bg-opacity-50 z-20 text-right text-xl transition-opacity duration-300 ease-in-out ${
+          isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
         onClick={toggleMenu}
       >
-        <div className="fixed inset-y-0 right-0 w-2/3 bg-white p-5 z-30">
+        <div
+          className={`fixed inset-y-0 right-0 w-2/3 bg-white p-5 z-30 transform transition-transform duration-300 ease-in-out ${
+            isOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+        >
           <button onClick={toggleMenu} className="mb-8 focus:outline-none">
             <svg
               className="w-6 h-6"
