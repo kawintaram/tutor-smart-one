@@ -9,11 +9,10 @@ const RegisterTutorPage = () => {
       {/* HEADER SECTION */}
       <section className="h-max w-full text-center bg-primary p-10 md:px-12 xl:px-36">
         <h1 className="text-4xl leading-loose font-bold text-light">
-          สมัครสอนกับ {BRAND_NAME}
+          สมัครสอนกับ{" "}
+          <span className="block md:inline md:w-auto">{BRAND_NAME}</span>
         </h1>
-        <p className="text-xl mt-4 md:mt-0">
-          ช่องทางและวิธีการในการสมัครสอนกับเรา
-        </p>
+        <p className="text-xl mt-4 md:mt-0">ช่องทางในการสมัครสอนกับเรา</p>
       </section>
 
       {/* ADD LINE SECTION */}

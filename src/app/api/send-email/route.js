@@ -36,14 +36,14 @@ export async function POST(request) {
   //   };
 
   const mailOptions = {
-    from: '"Tutor Smart One" <your-email@example.com>', // เปลี่ยนเป็นอีเมลของคุณ
+    from: '"Tutor Smart One" <tutorsmartone@gmail.com>', // เปลี่ยนเป็นอีเมลของคุณ
     to: process.env.EMAIL_USER, // ใช้ตัวแปรที่ถูกต้องสำหรับอีเมลของแอดมิน
-    subject: "ข้อมูลการลงทะเบียนใหม่",
+    subject: "ข้อมูลการสมัครเรียนใหม่",
     html: `
       <div style="font-family: Arial, sans-serif; padding: 20px; background-color: #f4f4f4;">
-        <h1 style="color: #1a202c;">ข้อมูลการลงทะเบียนใหม่</h1>
-        <p style="font-size: 16px; color: #333;">สวัสดี Admin,</p>
-        <p style="font-size: 16px; color: #333;">คุณได้รับข้อมูลการลงทะเบียนใหม่ดังนี้:</p>
+        <h1 style="color: #1a202c;">ข้อมูลการสมัครเรียนใหม่</h1>
+        <p style="font-size: 16px; color: #333;">Hi Admin,</p>
+        <p style="font-size: 16px; color: #333;">คุณได้รับข้อมูลการสมัครเรียนใหม่ ดังนี้:</p>
         <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
           <tr>
             <th style="text-align: left; padding: 8px; background-color: #2b6cb0; color: white;">ฟิลด์</th>
@@ -79,7 +79,7 @@ export async function POST(request) {
           </tr>
         </table>
         <p style="font-size: 16px; color: #333; margin-top: 20px;">ขอบคุณ!</p>
-        <p style="font-size: 14px; color: #777;">ระบบการลงทะเบียนของคุณ</p>
+        <p style="font-size: 14px; color: #777;">ระบบการสมัครเรียนของ Tutor Smart One</p>
       </div>
     `,
   };

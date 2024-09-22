@@ -50,7 +50,8 @@ const RegisterStudentPage = () => {
       {/* HEADER SECTION */}
       <section className="h-max w-full text-center bg-primary p-10 md:px-12 xl:px-36">
         <h1 className="text-4xl leading-loose font-bold text-light">
-          สมัครเรียนกับ {BRAND_NAME}
+          สมัครเรียนกับ{" "}
+          <span className="block md:inline md:w-auto">{BRAND_NAME}</span>
         </h1>
         <p className="text-xl mt-4 md:mt-0">
           สำหรับน้กเรียนหรือผู้ปกครอง สามารถสมัครง่าย ๆ ได้ด้วยตัวเอง
@@ -109,7 +110,7 @@ const RegisterStudentPage = () => {
               <input
                 id="studentName"
                 type="text"
-                placeholder="เด็กชาย A (ชื่อเล่น AA)"
+                placeholder="ชื่อของผู้เรียน"
                 {...register("studentName", {
                   required: "ชื่อของผู้เรียนเป็นข้อมูลที่จำเป็น",
                 })}
@@ -128,7 +129,7 @@ const RegisterStudentPage = () => {
               <input
                 id="subject"
                 type="text"
-                placeholder="วิชาคณิต"
+                placeholder="วิชาที่ต้องการเรียน"
                 {...register("subject", {
                   required: "วิชาที่ต้องการเรียนเป็นข้อมูลที่จำเป็น",
                 })}
@@ -147,7 +148,7 @@ const RegisterStudentPage = () => {
               </label>
               <textarea
                 id="details"
-                placeholder="ป.4 โรงเรียนBCDF หลักสูตร EP"
+                placeholder="ระดับชั้น ชื่อโรงเรียน และหลักสูตรที่ศึกษา"
                 {...register("details", {
                   required: "ข้อมูลนี้เป็นข้อมูลที่จำเป็น",
                 })}
@@ -163,13 +164,13 @@ const RegisterStudentPage = () => {
 
             <div className="mb-4">
               <label htmlFor="schedule" className="block text-dark">
-                วัน และช่วงเวลาที่ต้องการเรียน{" "}
+                วันและช่วงเวลาที่ต้องการเรียน{" "}
                 <span className="text-red-500">*</span>
               </label>
               <input
                 id="schedule"
                 type="text"
-                placeholder="จ พ ศ 16.00-18.00 (ให้ผู้สอนเลือกสอน2วัน)"
+                placeholder="วันและช่วงเวลาที่ต้องการเรียน"
                 {...register("schedule", {
                   required: "วันและช่วงเวลาที่ต้องการเรียนเป็นข้อมูลที่จำเป็น",
                 })}
@@ -190,7 +191,7 @@ const RegisterStudentPage = () => {
               <input
                 id="duration"
                 type="text"
-                placeholder="เรียนต่อเนื่องเรื่อยๆ"
+                placeholder="ระยะเวลาในการเรียน"
                 {...register("duration", {
                   required: "ระยะเวลาในการเรียนเป็นข้อมูลที่จำเป็น",
                 })}
@@ -209,7 +210,7 @@ const RegisterStudentPage = () => {
               <input
                 id="location"
                 type="text"
-                placeholder="ซอยร่วมสุขสันต์222"
+                placeholder="สถานที่ในการเรียน"
                 {...register("location", {
                   required: "สถานที่ในการเรียนเป็นข้อมูลที่จำเป็น",
                 })}
@@ -223,12 +224,12 @@ const RegisterStudentPage = () => {
 
             <div className="mb-4">
               <label htmlFor="contact" className="block text-dark">
-                เบอร์ติดต่อ หรือ ไลน์ID <span className="text-red-500">*</span>
+                เบอร์ติดต่อ หรือ Line ID <span className="text-red-500">*</span>
               </label>
               <input
                 id="contact"
                 type="text"
-                placeholder="0991234567 , ID : tu-cututor"
+                placeholder="เบอร์ติดต่อ หรือ Line ID"
                 {...register("contact", {
                   required: "เบอร์ติดต่อหรือ LINE ID เป็นข้อมูลที่จำเป็น",
                 })}

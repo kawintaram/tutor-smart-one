@@ -6,8 +6,8 @@ import Link from "next/link";
 
 const menus = [
   { label: " หน้าแรก", pathname: "/" },
-  { label: " สมัครสอน", pathname: "/register-tutor" },
   { label: " สมัครเรียน", pathname: "/register-student" },
+  { label: " สมัครสอน", pathname: "/register-tutor" },
 ];
 
 const Navbar = () => {
@@ -75,7 +75,7 @@ const Navbar = () => {
                 <Link
                   key={`menu-${index + 1}`}
                   href={menu.pathname}
-                  className="block text-secondary hover:text-primary"
+                  className="block text-secondary hover:text-primary my-4"
                   onClick={toggleMenu}
                 >
                   {menu.label}

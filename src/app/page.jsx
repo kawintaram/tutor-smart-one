@@ -1,6 +1,8 @@
+"use client";
 import { BRAND_NAME } from "@/config";
 import { stats, contents, reviews, services } from "@/lib/data";
 import { BsLine } from "react-icons/bs";
+import { motion } from "framer-motion";
 import Button from "@/components/button/Button";
 import Image from "next/image";
 import Card from "@/components/card/Card";
@@ -21,6 +23,8 @@ export default function Home() {
           <p className="w-3/4 mx-auto mb-4 text-xl md:mx-0 md:text-left">
             เชื่อมต่อผู้ปกครองและนักเรียนกับครูสอนพิเศษมืออาชีพทั้งออนไลน์และออนไซต์
             เพื่อการเรียนรู้ที่มีประสิทธิภาพและตรงความต้องการ
+            <br />
+            (อัตราค่าเรียนเริ่มต้น 250 บาท/ชั่วโมง)
           </p>
 
           <div className="flex justify-center md:justify-start">
@@ -49,12 +53,18 @@ export default function Home() {
             return (
               <>
                 <div key={stat.id} className="flex justify-around items-center">
-                  <div className="text-left">
+                  <motion.div
+                    initial={{ opacity: 0, y: 50 }} // ตั้งค่าเริ่มต้นที่โปร่งใสและเลื่อนลง
+                    animate={{ opacity: 1, y: 0 }} // animation เมื่อปรากฏ
+                    transition={{ duration: 0.5, delay: index * 0.2 }} // ระยะเวลาและการหน่วงเวลาในการแสดงผล
+                    className="text-center"
+                  >
                     <p className="text-light text-4xl font-bold">
                       {stat.amount}
                     </p>
+
                     <p>{stat.desc}</p>
-                  </div>
+                  </motion.div>
                 </div>
                 {index + 1 < stats.length ? (
                   <span className="bg-light h-1 w-1/2 my-6 md:h-20 md:w-1"></span>
@@ -160,7 +170,7 @@ export default function Home() {
             <p>
               หากมีข้อสงสัยหรือมีการเปลี่ยนแปลง สามารถพูดคุยกับทีมงานได้ทันที
             </p>
-            <div className="w-3/4 mx-auto my-4 md:w-2/5">
+            <div className="w-3/4 mx-auto my-4 md:w-2/5 lg:w-[34%]">
               <Link
                 href="https://lin.ee/zVvxFtU"
                 className="bg-light p-2 rounded-xl flex justify-around items-center"
@@ -204,7 +214,7 @@ export default function Home() {
               ติดต่อโดยตรงผ่านช่องทาง Line Official
             </p>
             <p>เพื่อรับข่าวสารเกี่ยวกับงานสอน</p>
-            <div className="w-3/4 mx-auto my-4 md:w-2/5">
+            <div className="w-3/4 mx-auto my-4 md:w-2/5 lg:w-[34%]">
               <Link
                 href="https://lin.ee/aP2rtUA"
                 className="bg-primary p-2 rounded-xl flex justify-around items-center text-light"

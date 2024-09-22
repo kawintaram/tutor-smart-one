@@ -11,23 +11,23 @@ import { FaUsersViewfinder } from "react-icons/fa6";
 export const stats = [
   {
     id: 1,
-    amount: "1000+",
-    desc: "Expert tutors",
+    amount: "5,000+",
+    desc: "ติวเตอร์มากประสบการณ์",
   },
   {
     id: 2,
-    amount: "1000+",
-    desc: "Expert tutors",
+    amount: "8,000+",
+    desc: "ผู้เรียน",
   },
   {
     id: 3,
-    amount: "1000+",
-    desc: "Expert tutors",
+    amount: "7 ปี",
+    desc: "ของการให้บริการ",
   },
   {
     id: 4,
-    amount: "1000+",
-    desc: "Expert tutors",
+    amount: "100%",
+    desc: "ผู้ปกครองการันตีความสำเร็จ",
   },
 ];
 

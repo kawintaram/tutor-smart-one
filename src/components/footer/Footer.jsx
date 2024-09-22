@@ -5,8 +5,8 @@ import Link from "next/link";
 
 const menus = [
   { label: " หน้าแรก", pathname: "/" },
-  { label: " สมัครสอน", pathname: "/register-tutor" },
   { label: " สมัครเรียน", pathname: "/register-student" },
+  { label: " สมัครสอน", pathname: "/register-tutor" },
 ];
 
 const Footer = () => {
@@ -34,10 +34,10 @@ const Footer = () => {
           <div className="flex items-center">
             <FaFacebookSquare size={20} className="mr-2" /> {BRAND_NAME}{" "}
             <span className="mx-2">|</span>
-            <FaLine size={20} className="mr-2" /> @TutorSmartOne
+            <FaLine size={20} className="mr-2" /> @tu-cututor
           </div>
           <div className="flex items-center justify-center md:justify-start">
-            <FaPhoneAlt size={15} className="mr-2" /> 099-999-9999
+            <FaPhoneAlt size={15} className="mr-2" /> 062-225-9641
           </div>
         </div>
       </div>
