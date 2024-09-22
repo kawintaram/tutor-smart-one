@@ -26,6 +26,7 @@ const RegisterStudentPage = () => {
 
   const onSubmit = async (data) => {
     setIsSending(true);
+    // console.log("Data to be sent:", data);
     try {
       const response = await axios.post("/api/send-email", data);
       // console.log("response", response);
